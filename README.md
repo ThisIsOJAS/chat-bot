@@ -70,7 +70,7 @@ OPENROUTER_API_KEY=your_openrouter_key_here
 Run the backend:
 
 ```bash
-npx tsx index.ts
+npm run dev
 ```
 
 Your backend will start on port 3001 by default.
@@ -100,6 +100,7 @@ Your app will be live on <http://localhost:5173> (remove angle brackets)
 
 ## 3️⃣ Folder Structure
 
+```text
 chat-bot/
 ├── chat-bot-backend/
 │ ├── embeddings/
@@ -134,3 +135,4 @@ MIT — free for personal and commercial use.
 ## Author
 
 Made with focus and learning by [Ojas Gupta](https://github.com/ThisIsOJAS)
+```
