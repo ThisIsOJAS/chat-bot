@@ -14,7 +14,6 @@ router.post("/", async (req, res) => {
   try {
     // fallback if no docId // document
     if (!docId) {
-      console.log("[CHAT] No docId provided. Using question as document.");
       docId = await storeDocument(question);
     }
     const response = await chatWithDocument(docId, question);

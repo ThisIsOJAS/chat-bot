@@ -36,15 +36,7 @@ const embeddings = new HuggingFaceInferenceEmbeddings({
 export async function storeDocument(text: string): Promise<string> {
   const id = uuidv4();
 
-  console.log(`[STORE] New document ID generated: ${id}`);
-  console.log("[STORE] Starting text splitting...");
-
   const splitDocs = await splitter.createDocuments([text]); // split document into overlapping chunks
-
-  console.log(
-    `[STORE] Text splitting complete. Total chunks: ${splitDocs.length}`
-  );
-  console.log("[STORE] Starting embedding...");
 
   // embed chunks and store in in-memory vector DB
   const vectorStore = await MemoryVectorStore.fromDocuments(
@@ -52,13 +44,7 @@ export async function storeDocument(text: string): Promise<string> {
     embeddings
   );
 
-  console.log("[STORE] Embedding complete.");
-
   documents.set(id, { id, vectorStore });
-
-  console.log(
-    `[STORE] Document stored in memory. Current store size: ${documents.size}`
-  );
 
   return id;
 }

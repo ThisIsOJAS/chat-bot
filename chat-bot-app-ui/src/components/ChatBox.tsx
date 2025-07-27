@@ -16,7 +16,6 @@ const ChatBox = () => {
       const response = await askQuestion(docId, question);
       setAnswer(response);
       setQuestion(""); // Clear question input after asking
-      console.log("AI Response:", response);
     } catch (err) {
       console.error("Error:", err);
       setAnswer("❌ Something went wrong.");
