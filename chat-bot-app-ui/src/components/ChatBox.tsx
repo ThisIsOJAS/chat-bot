@@ -42,8 +42,8 @@ const ChatBox = () => {
 
       <button
         onClick={handleAsk}
-        disabled={loading || !docId}
-        className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+        disabled={loading || !docId || !question.trim()}
+        className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50 enabled:cursor-pointer transition-colors duration-200"
       >
         {loading ? "Asking..." : "Send"}
       </button>
