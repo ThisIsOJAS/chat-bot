@@ -101,18 +101,31 @@ Your app will be live on <http://localhost:5173> (remove angle brackets)
 ## 3️⃣ Folder Structure
 
 ```text
-chat-bot/
-├── chat-bot-backend/
-│ ├── embeddings/
-│ ├── routes/
-│ ├── services/
-│ ├── utils/
-│ └── index.ts
-├── chat-bot-app-ui/
-│ ├── components/
-│ ├── store/
-│ ├── utils/
-│ └── main.tsx
+
+📁 chat-bot/
+├── 📁 chat-bot-backend/
+│   ├── 📁 src/
+│   │   ├── embeddings/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── types/
+│   │   ├── utils/
+│   │   └── index.ts
+│   ├── tsconfig.json
+│   ├── .env
+│   └── package.json
+├── 📁 chat-bot-app-ui/
+│   ├── 📁 src/
+│   │   ├── components/
+│   │   ├── store/
+│   │   ├── utils/
+│   │   ├── App.tsx
+│   │   ├── index.css
+│   │   └── main.tsx
+│   ├── .env
+│   ├── .env.production
+│   ├── index.html
+│   └── package.json
 └── preview.png
 
 ---
